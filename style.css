@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
 
+:root{
+    --backgroundColor: rgb(255, 213, 0);
+    --secondBackgroundColor: rgb(79, 136, 220);
+}
+
 
 body{
-    background-color: rgb(255, 213, 0);
+    background-color: var(--backgroundColor);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,7 +16,7 @@ body{
 }
 
 header{
-    background-color: rgb(79, 136, 220);
+    background-color: var(--secondBackgroundColor);
     margin: 0;
     padding: 0;
 }
@@ -27,7 +32,7 @@ header > h1{
 header .headerbg_container{
     margin-top: 10px;
     width: 100%;
-    height: 500px;
+    height: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +44,95 @@ header .headerbg_container{
 }
 
 main{
+    padding-block: 35px;
+    padding-inline: 15px;
     display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    grid-template-columns: auto 1fr 0.3fr;
     background-color: white;
 }
 
 /* Navigation */
+.navigation{
+    background-color: var(--secondBackgroundColor);
+    height: fit-content;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.navigation li a{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* description */
+.description h2{
+    color: orange;
+    font-size: 2em;
+}
+
+.description .description__text{
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+/* Matt Groening */
+.mattgroening{
+    padding: 10px 5px;
+    background-color: var(--secondBackgroundColor);
+    color: white;
+    height: fit-content;
+}
+
+.mattgroening .mattgroening__text{
+    font-weight: 500;
+    text-align: justify;
+    padding-inline: 5px;
+}
+
+.mattgroening__header{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mattgroening__header img{
+    width: 150px;
+    border: 2px solid white;
+}
+
+.mattgroening__header figcaption{
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 61, 152);
+    color: white;
+    font-weight: 500;
+}
